@@ -1,0 +1,40 @@
+// Overriding variables
+$primary: #7e56da;
+
+$body-bg: #f2f2f4;
+
+// fonts stack
+$font-family-sans-serif: "Nunito Sans",
+  Helvetica Neue #{"/* rtl:insert:Arabic */"},
+  // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for macOS (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  Roboto,
+  // Basic web fallback
+  Arial,
+  // Linux
+  "Noto Sans",
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// include all Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// General
+textarea {
+  resize: none;
+}
+
+// my custom styles
+@import "utilities";
+@import "components/header";
+@import "components/report-food-safety-issue-form";
