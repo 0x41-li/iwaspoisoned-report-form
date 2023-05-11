@@ -11,4 +11,5 @@ export default {
     port: 8080,
     hot: true,
   },
+  base: "/patrick-test-project/",
 };
