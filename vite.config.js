@@ -14,5 +14,5 @@ export default {
     port: 8080,
     hot: true,
   },
-  base: "iwaspoisoned-report-form",
+  base: "./iwaspoisoned-report-form",
 };
