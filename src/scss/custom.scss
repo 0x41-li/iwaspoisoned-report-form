@@ -1,7 +1,20 @@
-// Overriding variables
-$primary: #7e56da;
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// config
+$enable-rfs: false;
+
+// colors
+$primary: #131a29;
+$secondary: #7e56da;
 
 $body-bg: #f2f2f4;
+
+$gray-50: #fbfbfb;
+$gray-300: #e2e4e6;
+$gray-700: #97989b;
 
 // fonts stack
 $font-family-sans-serif: "Nunito Sans",
@@ -26,15 +39,115 @@ $font-family-sans-serif: "Nunito Sans",
   "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
-// include all Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+// border radius
+$border-radius-1: 0.25rem;
+$border-radius-2: 0.5rem;
+$border-radius-3: 0.75rem;
+$border-radius-4: 1rem;
+$border-radius-5: 1.25rem;
 
-// General
-textarea {
-  resize: none;
+// Switch component
+$form-check-input-checked-bg-color: $secondary;
+$form-check-input-indeterminate-bg-color: black;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+
+// colors
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "grey-50": $gray-50,
+    "grey-300": $gray-300,
+    "grey-700": $gray-700,
+  )
+);
+
+// spacers
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+);
+
+// Utilities API
+$utilities: (
+  "rounded": (
+    property: border-radius,
+    class: rounded,
+    values: (
+      0: 0,
+      1: $border-radius-1,
+      2: $border-radius-2,
+      3: $border-radius-3,
+      4: $border-radius-4,
+      5: $border-radius-5,
+      circle: 50%,
+      pill: $border-radius-pill,
+    ),
+  ),
+  "background": (
+    property: background,
+    class: bg,
+    values: (
+      "unset": unset,
+    ),
+  ),
+);
+
+// 5. Include remainder of required parts
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/card";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "~bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+// || header
+header > div {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-// my custom styles
-@import "utilities";
-@import "components/header";
-@import "components/report-food-safety-issue-form";
+// || Form
+#reportFormContainer {
+  max-width: 413px;
+}
+
+// swiper
+#report-form .swiper-slide {
+  width: auto;
+}
+
+// form progress bar
+#report-form .report-form-container__progress-bar {
+  height: 4px;
+  width: 103px;
+}
+
+#report-form textarea {
+  height: 160px;
+}
