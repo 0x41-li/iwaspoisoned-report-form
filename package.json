@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "vite",
-    "live": "vite build;gh-pages -d build",
+    "live": "vite build --base=iwaspoisoned-report-form;gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
