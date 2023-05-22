@@ -73,5 +73,8 @@
 // submit button
 #reportFormContainer .submit-btn {
   height: 40px;
-  max-width: 108px;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 108px;
+  }
 }
