@@ -39,6 +39,9 @@ $font-family-sans-serif: "Nunito Sans",
   "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
+// font styles
+$line-height-sm: 1.4;
+
 // border radius
 $border-radius-1: 0.25rem;
 $border-radius-2: 0.5rem;
@@ -49,6 +52,10 @@ $border-radius-5: 1.25rem;
 // Switch component
 $form-check-input-checked-bg-color: $secondary;
 $form-check-input-indeterminate-bg-color: black;
+
+// forms
+$input-focus-box-shadow: 0 0 0 3px #c4b1ee;
+$form-select-focus-box-shadow: 0 0 0 3px #c4b1ee;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
@@ -74,6 +81,12 @@ $spacers: (
   4: $spacer,
   5: $spacer * 1.25,
   6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 2.25,
+  10: $spacer * 2.5,
+  11: $spacer * 2.75,
+  12: $spacer * 3,
 );
 
 // Utilities API
@@ -101,6 +114,15 @@ $utilities: (
   ),
 );
 
+// containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1300px,
+);
+
 // 5. Include remainder of required parts
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
@@ -124,30 +146,5 @@ $utilities: (
 
 // 8. Add additional custom code here
 
-// || header
-header > div {
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// || Form
-#reportFormContainer {
-  max-width: 413px;
-}
-
-// swiper
-#reportFormContainer .swiper-slide {
-  width: auto;
-}
-
-// form progress bar
-#reportFormContainer .report-form-container__progress-bar {
-  height: 4px;
-  width: 103px;
-}
-
-#reportFormContainer textarea {
-  height: 160px;
-}
+@import "./components/header";
+@import "./components/report-form";

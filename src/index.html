@@ -19,21 +19,22 @@
     </header>
 
     <main>
-        <div class="container-fluid">
+        <div class="container-xxl">
             <div class="row">
-                <div class="col-12 col-lg-4 px-4">
+                <div class="col-12 col-lg-6 col-xxl-4 px-4 p-xxl-0">
 
-                    <div id="reportFormContainer" class="bg-white mt-5 position-relative rounded-2 mx-auto">
+                    <div id="reportFormContainer"
+                        class="bg-white mt-6 position-relative rounded-2 mx-auto overflow-hidden mx-lg-0 mt-lg-11">
 
                         <div class="report-form-container__progress-bar position-absolute top-0 start-0 bg-secondary">
                         </div>
 
                         <form action="https://iwaspoisoned.com/saveall" method="post" id="report-form" data-form="26"
-                            data-formtype="0" class="px-4 py-6">
+                            data-formtype="0" class="px-4 py-6 p-lg-6">
                             <input type="hidden" name="_token" value="lLgh5JVVrKMGw459AUVq0CF7n9NdSatrgKVa0S4T"> <input
                                 type="hidden" name="lang" value="en">
                             <input type="hidden" name="site" value="1">
-                            <div class="fs-5 fw-bold step-header">Report a food safety issue
+                            <div class="fs-5 fw-bold step-header text-primary lh-sm">Report a food safety issue<br />
                                 Protect others!</div>
 
 
@@ -58,14 +59,17 @@
                             </div>
 
 
-                            <div class="mt-5 fs-6 fw-semibold">I am reporting:<br></div>
+                            <div class="mt-5 fs-6">
+                                <p class="fw-semibold text-primary m-0">I am reporting</p>
+                            </div>
 
                             <div class="swiper mt-2 pe-1">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <input type="checkbox" class="d-none" data-mapping="1" value="Nausea"
                                             id="symptoms-560" name="symptoms[]" data-gtm="form-nausea">
-                                        <label class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300"
+                                        <label
+                                            class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300 text-primary fs-6 lh-base"
                                             for="symptoms-560">
                                             Nausea
                                         </label>
@@ -74,7 +78,7 @@
                                     <div class="swiper-slide">
                                         <input type="checkbox" class="d-none" data-mapping="1" value="Diarrhea"
                                             id="symptoms-562" name="symptoms[]" data-gtm="form-diarrhea">
-                                        <label class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300"
+                                        <label class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300 text-primary"
                                             for="symptoms-562">
                                             Diarrhea
                                         </label>
@@ -83,7 +87,7 @@
                                     <div class="swiper-slide">
                                         <input type="checkbox" class="d-none" data-mapping="1" value="Vomiting"
                                             id="symptoms-563" name="symptoms[]" data-gtm="form-vomiting">
-                                        <label class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300"
+                                        <label class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300 text-primary"
                                             for="symptoms-563">
                                             Vomiting
                                         </label>
@@ -92,7 +96,7 @@
                                     <div class="swiper-slide">
                                         <input type="checkbox" class="d-none" data-mapping="1" value="Something else"
                                             id="symptoms-597" name="symptoms[]" data-gtm="form-something-else">
-                                        <label class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300"
+                                        <label class="btn py-2 fw-400 bg-grey-50 border-1 border-grey-300 text-primary"
                                             for="symptoms-597">
                                             Something else
                                         </label>
@@ -105,7 +109,7 @@
                             </div>
 
                             <div class="mt-5 d-flex justify-content-between align-items-center">
-                                <label for="gotSickFrom" class="fw-semibold">Got sick from</label>
+                                <label for="gotSickFrom" class="fw-semibold text-primary">Got sick from</label>
 
                                 <select
                                     class="form-select d-inline-block bg-transparent border-0 w-auto bg-unset p-0 fw-semibold text-grey-700 text-end"
@@ -118,7 +122,8 @@
                             </div>
 
                             <div class="mt-2">
-                                <select class="form-select bg-transparent bg-unset border-1 border-grey-300"
+                                <select
+                                    class="city-form-select form-select bg-transparent bg-unset border-1 border-grey-300 text-primary py-2 px-3 fs-6 lh-base"
                                     aria-label="Default select example" name="city">
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
@@ -185,75 +190,81 @@
 
 
                                 <div class="position-absolute bottom-0 start-0 w-100 px-3 pb-2">
-                                    <div class="d-flex gap-4">
-                                        <button class="bg-transparent border-0 p-0">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    <div class="d-flex gap-6">
+                                        <button class="bg-transparent border-0 p-0 d-flex">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M14.3028 0.749756H5.65076C2.63876 0.749756 0.749756 2.88376 0.749756 5.90376V14.0498C0.749756 17.0698 2.63076 19.2038 5.65076 19.2038H14.2978C17.3228 19.2038 19.2028 17.0698 19.2028 14.0498V5.90376C19.2068 2.88376 17.3258 0.749756 14.3028 0.749756Z"
+                                                    d="M16.303 2.75H7.651C4.639 2.75 2.75 4.884 2.75 7.904V16.05C2.75 19.07 4.631 21.204 7.651 21.204H16.298C19.323 21.204 21.203 19.07 21.203 16.05V7.904C21.207 4.884 19.326 2.75 16.303 2.75Z"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M8.70311 6.78496C8.70311 7.80496 7.87711 8.63096 6.85711 8.63096C5.83811 8.63096 5.01111 7.80496 5.01111 6.78496C5.01111 5.76496 5.83811 4.93896 6.85711 4.93896C7.87611 4.93996 8.70211 5.76596 8.70311 6.78496Z"
+                                                    d="M10.7037 8.78545C10.7037 9.80545 9.87772 10.6315 8.85772 10.6315C7.83872 10.6315 7.01172 9.80545 7.01172 8.78545C7.01172 7.76545 7.83872 6.93945 8.85772 6.93945C9.87672 6.94045 10.7027 7.76645 10.7037 8.78545Z"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
-                                                    d="M19.207 12.9509C18.284 12.0009 16.509 10.0819 14.579 10.0819C12.648 10.0819 11.535 14.3149 9.678 14.3149C7.821 14.3149 6.134 12.4009 4.646 13.6279C3.158 14.8539 1.75 17.3609 1.75 17.3609"
+                                                    d="M21.207 14.951C20.284 14.001 18.509 12.082 16.579 12.082C14.648 12.082 13.535 16.315 11.678 16.315C9.821 16.315 8.134 14.401 6.646 15.628C5.158 16.854 3.75 19.361 3.75 19.361"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
+
                                         </button>
 
-                                        <button class="bg-transparent border-0 p-0">
-                                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+                                        <button class="bg-transparent border-0 p-0 d-flex">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M15.2969 11.5383C15.3778 13.3704 13.8992 14.9196 11.9946 14.9975C11.8543 15.0034 5.01531 14.9896 5.01531 14.9896C3.11996 15.1335 1.46115 13.7715 1.31165 11.9463C1.30039 11.8103 1.30346 4.47219 1.30346 4.47219C1.21949 2.63815 2.69604 1.08499 4.60163 1.00418C4.74396 0.997278 11.5738 1.01009 11.5738 1.01009C13.4783 0.868176 15.1423 2.24001 15.2897 4.07405C15.3 4.2061 15.2969 11.5383 15.2969 11.5383Z"
+                                                    d="M16.2976 15.5383C16.3785 17.3704 14.8999 18.9196 12.9953 18.9975C12.8551 19.0034 6.01604 18.9896 6.01604 18.9896C4.12069 19.1335 2.46188 17.7715 2.31238 15.9463C2.30112 15.8103 2.30419 8.47219 2.30419 8.47219C2.22023 6.63815 3.69678 5.08499 5.60236 5.00418C5.74469 4.99728 12.5745 5.01009 12.5745 5.01009C14.4791 4.86818 16.143 6.24001 16.2904 8.07405C16.3007 8.2061 16.2976 15.5383 16.2976 15.5383Z"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
-                                                    d="M15.3 5.97984L18.593 3.28484C19.409 2.61684 20.633 3.19884 20.632 4.25184L20.62 11.6008C20.619 12.6538 19.394 13.2308 18.58 12.5628L15.3 9.86784"
+                                                    d="M16.3008 9.97984L19.5938 7.28484C20.4098 6.61684 21.6338 7.19884 21.6328 8.25184L21.6208 15.6008C21.6198 16.6538 20.3948 17.2308 19.5808 16.5628L16.3008 13.8678"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
+
                                         </button>
 
-                                        <button class="bg-transparent border-0 p-0">
-                                            <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                        <button class="bg-transparent border-0 p-0 d-flex">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M11.5 8.50051C11.5 7.11924 10.3808 6 9.00051 6C7.61924 6 6.5 7.11924 6.5 8.50051C6.5 9.88076 7.61924 11 9.00051 11C10.3808 11 11.5 9.88076 11.5 8.50051Z"
+                                                    d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M8.99951 19C7.80104 19 1.5 13.8984 1.5 8.56329C1.5 4.38664 4.8571 1 8.99951 1C13.1419 1 16.5 4.38664 16.5 8.56329C16.5 13.8984 10.198 19 8.99951 19Z"
+                                                    d="M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
+
                                         </button>
 
-                                        <button class="bg-transparent border-0 p-0">
-                                            <svg width="18" height="22" viewBox="0 0 18 22" fill="none"
+                                        <button class="bg-transparent border-0 p-0 d-flex">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.99982 21V17.839" stroke="#97989B" stroke-width="1.5"
+                                                <path d="M12.0004 21.9998V18.8389" stroke="#97989B" stroke-width="1.5"
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M8.99982 13.8481V13.8481C6.75662 13.8481 4.93774 12.0218 4.93774 9.76819V5.08095C4.93774 2.82732 6.75662 1 8.99982 1C11.2441 1 13.0619 2.82732 13.0619 5.08095V9.76819C13.0619 12.0218 11.2441 13.8481 8.99982 13.8481Z"
+                                                    d="M11.9996 14.8481V14.8481C9.75637 14.8481 7.9375 13.0218 7.9375 10.7682V6.08095C7.9375 3.82732 9.75637 2 11.9996 2C14.2438 2 16.0617 3.82732 16.0617 6.08095V10.7682C16.0617 13.0218 14.2438 14.8481 11.9996 14.8481Z"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
-                                                    d="M17 9.80066C17 14.2395 13.4188 17.8383 8.99948 17.8383C4.58117 17.8383 1 14.2395 1 9.80066"
+                                                    d="M20 10.8008C20 15.2396 16.4188 18.8385 11.9995 18.8385C7.58117 18.8385 4 15.2396 4 10.8008"
                                                     stroke="#97989B" stroke-width="1.5" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
+
                                         </button>
                                     </div>
 
 
-                                    <div class="form-check form-switch mt-3 d-flex align-content-center">
-                                        <input type="checkbox" name="private" class="form-check-input" data-mapping="10"
-                                            id="private-117" data-gtm="form-private">
-                                        <label class="form-check-label ms-3" for="private-117">Make a private</label>
+                                    <div
+                                        class="form-check form-switch mt-4 d-flex align-content-center align-items-center mb-0">
+                                        <input type="checkbox" name="private" class="form-check-input border-0 mt-0 "
+                                            data-mapping="10" id="private-117" data-gtm="form-private">
+                                        <label class="form-check-label ms-3 text-primary" for="private-117">Make a
+                                            private</label>
                                     </div>
                                 </div>
 
@@ -262,15 +273,16 @@
                             <input type="hidden" name="notes" value="">
 
 
-                            <div class="form-group">
+                            <div class="form-group mt-5">
                                 <button type="button" data-step="117" data-mapping="" id="submit-117"
-                                    data-gtm="form-submit" class="btn btn-secondary w-100 mt-5">Continue</button>
+                                    data-gtm="form-submit"
+                                    class="submit-btn btn btn-secondary w-100 py-2 fs-6 lh-base rounded-2 fw-semibold">Continue</button>
                             </div>
 
 
                         </form>
-                    </div>
 
+                    </div>
 
                 </div>
             </div>
